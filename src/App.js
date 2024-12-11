@@ -105,7 +105,7 @@ let socket;
  
 function getSocket() {
   if (!socket) {
-    socket = io("http://localhost:8000", {
+    socket = io(process.env.REACT_APP_URL, {
       autoConnect: true,
       reconnection: true,
       reconnectionAttempts: 10,
